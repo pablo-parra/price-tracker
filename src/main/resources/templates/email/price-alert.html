@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f4f4f4; margin: 0; padding: 20px; }
+        .container { max-width: 600px; margin: auto; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .header { background: #2ecc71; color: white; padding: 24px 32px; }
+        .header h1 { margin: 0; font-size: 22px; }
+        .body { padding: 32px; }
+        .price-box { background: #f0faf4; border-left: 4px solid #2ecc71; padding: 16px; margin: 24px 0; border-radius: 4px; }
+        .price-box .current { font-size: 32px; font-weight: bold; color: #2ecc71; }
+        .price-box .desired { font-size: 14px; color: #888; margin-top: 4px; }
+        .btn { display: inline-block; background: #2ecc71; color: white; padding: 12px 24px; text-decoration: none; border-radius: 4px; margin-top: 16px; }
+        .footer { background: #f4f4f4; padding: 16px 32px; font-size: 12px; color: #aaa; text-align: center; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>&#127381; Price Alert!</h1>
+    </div>
+    <div class="body">
+        <p>Good news! The price for <strong th:text="${product.name}">Product Name</strong> has dropped below your desired price.</p>
+        <div class="price-box">
+            <div class="current" th:text="'&#36;' + ${#numbers.formatDecimal(currentPrice, 1, 2)}">$0.00</div>
+            <div class="desired" th:text="'Your target: $' + ${#numbers.formatDecimal(product.desiredPrice, 1, 2)}">Your target: $0.00</div>
+        </div>
+        <p>Check it out before the price goes back up:</p>
+        <a class="btn" th:href="${product.url}">View Product &rarr;</a>
+    </div>
+    <div class="footer">PriceTracker &mdash; You are receiving this because the product reached your desired price.</div>
+</div>
+</body>
+</html>

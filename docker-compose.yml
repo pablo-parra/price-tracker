@@ -1,0 +1,22 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: pricetracker-db
+    environment:
+      POSTGRES_DB: pricetracker
+      POSTGRES_USER: pricetracker
+      POSTGRES_PASSWORD: pricetracker
+    ports:
+      - "5432:5432"
+    volumes:
+      - pricetracker_data:/var/lib/postgresql/data
+
+  mailhog:
+    image: mailhog/mailhog:latest
+    container_name: pricetracker-mail
+    ports:
+      - "1025:1025"   # SMTP — your app sends here
+      - "8025:8025"   # Web UI — view emails in browser
+
+volumes:
+  pricetracker_data:
