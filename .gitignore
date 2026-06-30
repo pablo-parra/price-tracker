@@ -1,0 +1,104 @@
+# -----------------------------------------------
+# Maven
+# -----------------------------------------------
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# -----------------------------------------------
+# Personal Maven settings (not for version control)
+# -----------------------------------------------
+my-settings.xml
+
+# -----------------------------------------------
+# Spring Boot
+# -----------------------------------------------
+HELP.md
+*.log
+logs/
+spring-shell.log
+
+# -----------------------------------------------
+# Java
+# -----------------------------------------------
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+*.zip
+*.tar.gz
+*.rar
+hs_err_pid*
+replay_pid*
+
+# -----------------------------------------------
+# IntelliJ IDEA
+# -----------------------------------------------
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+# -----------------------------------------------
+# Eclipse / STS
+# -----------------------------------------------
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+.cache-main
+.scala_dependencies
+.worksheet
+
+# -----------------------------------------------
+# VS Code
+# -----------------------------------------------
+.vscode/
+
+# -----------------------------------------------
+# NetBeans
+# -----------------------------------------------
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# -----------------------------------------------
+# macOS
+# -----------------------------------------------
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# -----------------------------------------------
+# Environment and secrets
+# -----------------------------------------------
+.env
+.env.*
+!.env.example
+application-local.properties
+application-local.yml
+application-secret.properties
+application-secret.yml
